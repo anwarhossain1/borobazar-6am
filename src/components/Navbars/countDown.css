@@ -6,3 +6,35 @@
   justify-content: center;
   align-items: center;
 }
+
+.all_container {
+  display: flex;
+  margin-top: "5px";
+  align-items: center;
+  color: white;
+}
+
+.countText {
+  margin-left: "5px";
+  color: white;
+}
+
+.counter__container {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.counter__data {
+  background-color: white;
+  width: 35px;
+  height: 30px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 4px;
+  font-weight: bold;
+  font-size: medium;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: black;
+}
