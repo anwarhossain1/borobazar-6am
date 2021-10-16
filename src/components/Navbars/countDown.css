@@ -23,6 +23,7 @@
   margin-left: 5px;
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .counter__data {

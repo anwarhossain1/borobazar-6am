@@ -1,5 +1,7 @@
 import React from "react";
+import Homepage from "./components/Homepage/Homepage";
 import CountDown from "./components/Navbars/countDown";
+import Navbar from "./components/Navbars/Navbar";
 
 const App = () => {
   return (
@@ -8,9 +10,13 @@ const App = () => {
         <div>
           <CountDown />
         </div>
-        <div>Navbar</div>
+        <div>
+          <Navbar />
+        </div>
       </div>
-      <div className="carousel">carousel with search</div>
+      <div className="homepage">
+        <Homepage />
+      </div>
     </div>
   );
 };

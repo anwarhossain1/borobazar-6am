@@ -27,7 +27,7 @@ const countDown = () => {
             :<div className="counter__data">{minutes}</div>:
             <div className="counter__data">{seconds}</div>
           </div>
-          <div className="close">
+          <div>
             <CloseOutlined />
           </div>
         </div>
