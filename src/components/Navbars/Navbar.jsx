@@ -48,7 +48,7 @@ const Navbar = () => {
   );
   return (
     <Menu mode="horizontal">
-      <Item icon={<MenuOutlined />} />
+      {/* <Item icon={<MenuOutlined />} /> */}
       <Item className="logo_bottom">
         <img alt="logo" src={logo} className="logo" />
       </Item>
