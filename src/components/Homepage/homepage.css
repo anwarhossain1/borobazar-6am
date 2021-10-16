@@ -4,3 +4,28 @@
   cursor: pointer;
   margin: 40px;
 }
+
+.app__promote {
+  background: url("../../assets/images/app_promote.png");
+  height: 47vh;
+}
+
+.content {
+  padding-top: 70px;
+  width: 35%;
+  margin-left: 200px;
+}
+
+.content > h1 {
+  font-weight: bold;
+  font-size: 42px;
+}
+
+.content > p {
+  color: #484848;
+  font-size: 21px;
+}
+
+.google_play_store {
+  margin-left: 5px;
+}

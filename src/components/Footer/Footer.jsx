@@ -104,7 +104,6 @@ const Footer = () => {
             </p>
             <Input
               style={{
-                width: "90%",
                 height: "50px",
                 borderRadius: "8px",
               }}
