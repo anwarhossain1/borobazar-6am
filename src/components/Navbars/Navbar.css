@@ -1,3 +1,7 @@
+.navbar {
+  position: inherit;
+}
+
 .logo {
   margin-top: 20px;
   margin-bottom: 22px;

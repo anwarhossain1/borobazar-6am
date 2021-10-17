@@ -7,6 +7,7 @@
 
 .app__promote {
   background: url("../../assets/images/app_promote.png");
+  width: 100%;
   height: 47vh;
 }
 

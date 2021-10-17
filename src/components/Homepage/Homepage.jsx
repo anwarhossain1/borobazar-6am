@@ -3,12 +3,17 @@ import Banner from "./Banner";
 import appleStore from "../../assets/images/app_store.png";
 import googleStore from "../../assets/images/google_play.png";
 import "./homepage.css";
+
+import Cards from "../Cards/Cards";
 const Homepage = () => {
   return (
     <div>
       <Banner />
+      <div className="cards">
+        <Cards />
+      </div>
+
       <div className="super__discount" />
-      <div>Hello</div>
       <div className="app__promote">
         <div className="content">
           <h1>Make your online shop easier with our mobile app</h1>
