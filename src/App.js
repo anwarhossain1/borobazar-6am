@@ -3,12 +3,16 @@ import Homepage from "./components/Homepage/Homepage";
 import CountDown from "./components/Navbars/CountDown";
 import Navbar from "./components/Navbars/Navbar";
 import Footer from "./components/Footer/Footer";
+import MiddleNavbar from "./components/Navbars/MiddleNavbar";
 const App = () => {
   return (
     <div>
       <div>
         <div>
           <CountDown />
+        </div>
+        <div>
+          <MiddleNavbar />
         </div>
         <div>
           <Navbar />

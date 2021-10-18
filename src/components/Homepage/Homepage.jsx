@@ -3,12 +3,29 @@ import Banner from "./Banner";
 import appleStore from "../../assets/images/app_store.png";
 import googleStore from "../../assets/images/google_play.png";
 import "./homepage.css";
+import image1 from "../../assets/images/app_promote.png";
+import image2 from "../../assets/images/superDiscount.png";
+import image3 from "../../assets/images/steak.png";
 
 import Cards from "../Cards/Cards";
+import CardSwipe from "../Cards/CardSwipe/CardSwipe";
 const Homepage = () => {
+  const images = [
+    {
+      image: image1,
+    },
+    {
+      image: image2,
+    },
+    {
+      image: image3,
+    },
+  ];
+
   return (
     <div>
-      <Banner />
+      {/* <Banner /> */}
+      <CardSwipe images={images} />
       <div className="cards">
         <Cards />
       </div>

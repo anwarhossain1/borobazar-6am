@@ -6,6 +6,8 @@ import {
   MailOutlined,
   ShoppingCartOutlined,
   UserOutlined,
+  ArrowDownOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 import logo from "../../assets/images/logo.png";
 import ukLogo from "../../assets/images/uk.png";
@@ -38,58 +40,56 @@ const Navbar = () => {
   if (scrolled) {
     navbarClasses.push("scrolled");
   }
-  const menu = (
-    <Menu>
-      <Item key="0">
-        <a>
-          <img alt="uk" src={saLogo} className="lan-images" /> عربى - AR
-        </a>
-      </Item>
-      <Item key="1">
-        <a href="https://www.aliyun.com">
-          {" "}
-          <img alt="uk" src={ukLogo} className="lan-images" />
-          English - EN
-        </a>
-      </Item>
+  // const menu = (
+  //   <Menu>
+  //     <Item key="0">
+  //       <a>
+  //         <img alt="uk" src={saLogo} className="lan-images" /> عربى - AR
+  //       </a>
+  //     </Item>
+  //     <Item key="1">
+  //       <a href="https://www.aliyun.com">
+  //         {" "}
+  //         <img alt="uk" src={ukLogo} className="lan-images" />
+  //         English - EN
+  //       </a>
+  //     </Item>
 
-      <Item key="2">
-        <img alt="uk" src={chainaLogo} className="lan-images" />
-        中国人 - ZH
-      </Item>
-      <Item key="2">
-        <img alt="uk" src={germanyLogo} className="lan-images" /> Deutsch - DE
-      </Item>
-      <Item key="2">
-        <img alt="uk" src={israelLogo} className="lan-images" />
-        rעברית - HE
-      </Item>
-      <Item key="2">
-        <img alt="uk" src={spainLogo} className="lan-images" />
-        Español - ES
-      </Item>
-    </Menu>
-  );
+  //     <Item key="2">
+  //       <img alt="uk" src={chainaLogo} className="lan-images" />
+  //       中国人 - ZH
+  //     </Item>
+  //     <Item key="2">
+  //       <img alt="uk" src={germanyLogo} className="lan-images" /> Deutsch - DE
+  //     </Item>
+  //     <Item key="2">
+  //       <img alt="uk" src={israelLogo} className="lan-images" />
+  //       rעברית - HE
+  //     </Item>
+  //     <Item key="2">
+  //       <img alt="uk" src={spainLogo} className="lan-images" />
+  //       Español - ES
+  //     </Item>
+  //   </Menu>
+  // );
   return (
     <Menu
       className={navbarClasses.join(" ")}
       mode="horizontal"
       style={{ padding: "5px", fontSize: "15px" }}
     >
-      <Item className="logo_bottom">
-        <img alt="logo" src={logo} className="logo" />
+      <Item>
+        <img
+          alt="logo"
+          src={logo}
+          className={scrolled ? "logoVisible" : "logoHide"}
+        />
       </Item>
 
       <>
         <SubMenu title="Demos" style={{ marginTop: "14px" }}>
           <Item>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.antgroup.com"
-            >
-              Modern
-            </a>
+            <a>Modern</a>
           </Item>
           <Item>Classic</Item>
           <Item>Vintage</Item>
@@ -130,32 +130,52 @@ const Navbar = () => {
         </SubMenu>
       </>
 
-      <Item style={{ marginTop: "14px" }}>
+      {/* <Item style={{ marginTop: "14px" }}>
         <Dropdown overlay={menu} trigger={["click"]}>
           <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
             <img alt="uk" src={ukLogo} className="lan-images" />
             English - EN <DownOutlined />
           </a>
         </Dropdown>
-      </Item>
-      <Item style={{ marginTop: "14px" }}>
-        <Button
-          icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
-          type="text"
-          size="large"
-        >
-          Cart
-        </Button>
-      </Item>
-      <Item style={{ marginTop: "14px" }}>
-        <Button
-          icon={<UserOutlined style={{ fontSize: "20px" }} />}
-          type="text"
-          shape="round"
-        >
-          Sign In
-        </Button>
-      </Item>
+      </Item> */}
+      {scrolled ? (
+        <>
+          <Item style={{ marginTop: "14px" }}>
+            <Button
+              type="text"
+              icon={<SearchOutlined style={{ fontSize: "20px" }} />}
+            />
+          </Item>
+          <Item style={{ marginTop: "14px" }}>
+            <Button
+              icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
+              type="text"
+              size="large"
+            >
+              Cart
+            </Button>
+          </Item>
+          <Item style={{ marginTop: "14px" }}>
+            <Button
+              icon={<UserOutlined style={{ fontSize: "20px" }} />}
+              type="text"
+              shape="round"
+            >
+              Sign In
+            </Button>
+          </Item>
+        </>
+      ) : (
+        <Item style={{ marginTop: "14px" }}>
+          <Button
+            icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
+            type="text"
+            size="large"
+          >
+            Delivery: <span>Address</span> <ArrowDownOutlined />
+          </Button>
+        </Item>
+      )}
     </Menu>
   );
 };

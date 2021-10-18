@@ -1,9 +1,10 @@
-import { Navigation } from "swiper";
+import SwiperCore, { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
 import "./cardSwiper.css";
+SwiperCore.use([Pagination]);
 const CardSwipe = ({ images }) => {
   return (
     <Swiper
@@ -19,12 +20,13 @@ const CardSwipe = ({ images }) => {
       //       slidesPerView: 2,
       //     },
       //   }}
-      spaceBetween={100}
-      navigation
-      slidesPerView={3}
-      centeredSlides
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // spaceBetween={100}
+      // slidesPerView={1}
+      // centeredSlides
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // width={100}
+      pagination={true}
     >
       {images.map((card) => {
         return <SwiperSlide>{<img src={card.image} />}</SwiperSlide>;
