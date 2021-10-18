@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Countdown from "react-countdown";
 import "./countDown.css";
 import { CloseOutlined } from "@ant-design/icons";
 import timer from "../../assets/images/timer.png";
-const countDown = () => {
+const CountDown = () => {
+  const [show, setShow] = useState(true);
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
@@ -28,7 +29,7 @@ const countDown = () => {
             <div className="counter__data">{seconds}</div>
           </div>
           <div>
-            <CloseOutlined />
+            <CloseOutlined onClick={() => setShow(false)} />
           </div>
         </div>
       );
@@ -36,10 +37,12 @@ const countDown = () => {
   };
 
   return (
-    <div className="topnav">
-      <Countdown date={Date.now() + 24800000} renderer={renderer} />
-    </div>
+    show && (
+      <div className="topnav">
+        <Countdown date={Date.now() + 24800000} renderer={renderer} />
+      </div>
+    )
   );
 };
 
-export default countDown;
+export default CountDown;

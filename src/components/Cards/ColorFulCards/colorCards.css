@@ -1,0 +1,29 @@
+.color__container {
+  margin: 40px;
+}
+.color__cards__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.color__card {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.color__card__image > img {
+  width: 100%;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.color__card:hover > .color__card__image > img {
+  transform: scale(1.04);
+}
+
+@media only screen and (max-width: 460) {
+  .colll {
+    display: none;
+  }
+}

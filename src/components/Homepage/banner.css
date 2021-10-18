@@ -76,4 +76,19 @@
   .search {
     display: none;
   }
+  .banner {
+    height: 45vh;
+  }
+  .banner__content {
+    padding-top: 70px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .banner__content > h1 {
+    font-size: 35px;
+  }
+  .banner__content > p {
+    font-size: 17px;
+  }
 }

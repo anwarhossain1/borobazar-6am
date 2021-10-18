@@ -1,10 +1,14 @@
 .navbar {
+  overflow: hidden;
   position: inherit;
+  width: 100%;
+  padding-left: 40px;
 }
 
 .logo {
   margin-top: 20px;
   margin-bottom: 22px;
+  margin-left: 20px;
 }
 .logo_bottom {
   border-bottom: none;

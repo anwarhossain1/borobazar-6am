@@ -30,3 +30,18 @@
 .google_play_store {
   margin-left: 5px;
 }
+@media (max-width: 481px) {
+  .content {
+    text-align: center;
+    padding-top: 50px;
+    width: 80%;
+    margin-left: 40px;
+  }
+  .content > h1 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .content > p {
+    font-size: 15px;
+  }
+}

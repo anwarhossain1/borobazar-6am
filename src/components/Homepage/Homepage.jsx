@@ -12,8 +12,6 @@ const Homepage = () => {
       <div className="cards">
         <Cards />
       </div>
-
-      <div className="super__discount" />
       <div className="app__promote">
         <div className="content">
           <h1>Make your online shop easier with our mobile app</h1>

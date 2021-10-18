@@ -1,6 +1,6 @@
 import React from "react";
 import Homepage from "./components/Homepage/Homepage";
-import CountDown from "./components/Navbars/countDown";
+import CountDown from "./components/Navbars/CountDown";
 import Navbar from "./components/Navbars/Navbar";
 import Footer from "./components/Footer/Footer";
 const App = () => {
