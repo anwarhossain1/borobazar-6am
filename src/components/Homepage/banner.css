@@ -71,7 +71,7 @@
     padding-right: 35%;
   }
 }
-@media (max-width: 481px) {
+@media (min-width: 480px) {
   .search {
     display: none;
   }

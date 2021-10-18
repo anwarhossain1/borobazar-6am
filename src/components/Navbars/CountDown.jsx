@@ -12,10 +12,10 @@ const CountDown = () => {
       // Render a countdown
       return (
         <div className="all_container">
-          <div style={{ margin: "7px" }}>
+          <div className="counter__logo">
             <img alt="counter logo" src={timer} />
           </div>
-          <div style={{ marginTop: "15px", color: "white" }}>
+          <div className="counter__title">
             <p>
               Claim your online {""}
               <strong>FREE Delivery or Shipping</strong> today! Expires in

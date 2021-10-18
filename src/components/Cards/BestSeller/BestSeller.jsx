@@ -16,11 +16,11 @@ const BestSeller = ({ title, description, data }) => {
                 <Col md={4} sm={8} xs={12}>
                   <div className="cards_container">
                     <Card
-                      className="card"
+                      className="best__card"
                       hoverable
                       cover={
                         <img
-                          className="card_image"
+                          className="best__card__image"
                           alt="example"
                           src={item.image}
                         />

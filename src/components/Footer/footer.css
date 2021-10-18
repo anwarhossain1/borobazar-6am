@@ -2,23 +2,37 @@
   margin: 40px;
 }
 .fst_col {
+  text-align: center;
   margin-right: 20px;
+}
+
+.fst_col > h3 {
+  color: #696969;
+  font-size: 14px;
+  margin: 0 20%;
 }
 .fst_col > img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.col_icons > ul {
-  overflow: hidden;
+.col__icons {
+  margin-left: auto;
+  margin-right: auto;
 }
-.col_icons > ul > li {
+
+.col__icons > ul {
+  overflow: hidden;
+  margin-left: 100px;
+}
+.col__icons > ul > li {
   display: inline-block;
   color: red;
 }
 
 .snd_col {
   text-align: left;
+  float: left;
 }
 
 .snd_col > h3 {

@@ -5,6 +5,7 @@
 
 .best__seller > h1 {
   font-weight: bold;
+  font-size: 18px;
 }
 .best__seller > p {
   color: #7f7f7f;
@@ -12,19 +13,20 @@
 }
 
 .cards_container {
-  margin: 8px;
+  margin: 10px;
 }
 
-.card {
+.best__card {
   text-align: left;
+  margin-right: 10px;
 }
 
-.card_image {
+.best__card__image {
   transition: all 0.2s ease-in-out;
 }
 
-.card:hover .card_image {
-  transform: scale(1.01);
+.best__card:hover .best__card__image {
+  transform: scale(1.02, 1.02);
 }
 .cards_button {
   position: absolute;
@@ -45,8 +47,12 @@
   background-color: #54b49f;
 }
 
-@media only screen and (min-width: 960) {
+@media only screen and (min-width: 1200) {
   .cards_button {
-    bottom: 60%;
+    bottom: 20%;
+  }
+
+  .cards_container {
+    margin: 10px;
   }
 }

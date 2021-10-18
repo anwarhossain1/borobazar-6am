@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Menu, Dropdown, Button } from "antd";
-import { MenuOutlined, DownOutlined, MailOutlined } from "@ant-design/icons";
+import {
+  MenuOutlined,
+  DownOutlined,
+  MailOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import logo from "../../assets/images/logo.png";
 import ukLogo from "../../assets/images/uk.png";
 import saLogo from "../../assets/images/saudi-arabia.png";
@@ -35,8 +41,7 @@ const Navbar = () => {
   const menu = (
     <Menu>
       <Item key="0">
-        <a href="https://www.antgroup.com">
-          {" "}
+        <a>
           <img alt="uk" src={saLogo} className="lan-images" /> عربى - AR
         </a>
       </Item>
@@ -71,54 +76,60 @@ const Navbar = () => {
       mode="horizontal"
       style={{ padding: "5px", fontSize: "15px" }}
     >
-      {/* <Item icon={<MenuOutlined />} /> */}
       <Item className="logo_bottom">
         <img alt="logo" src={logo} className="logo" />
       </Item>
-      <SubMenu title="Demos" style={{ marginTop: "14px" }}>
-        <Item>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.antgroup.com"
-          >
-            Modern
-          </a>
-        </Item>
-        <Item>Classic</Item>
-        <Item>Vintage</Item>
-        <Item>Standard</Item>
-        <Item>Minimal</Item>
-        <Item>Trendy</Item>
-        <Item>Elegant</Item>
-      </SubMenu>
-      <SubMenu key="smenu" title="Categories" style={{ marginTop: "14px" }}>
-        <Item className="ant-dropdown-link">Fresh Vegetables</Item>
-        <Item>Diet Nutrition</Item>
-        <Item> Healthy Foods</Item>
-        <Item> Grocery Items</Item>
-        <Item> Beaf Steak</Item>
-      </SubMenu>
-      <SubMenu key="ssmenu" title="Dietary" style={{ marginTop: "14px" }}>
-        <Item className="ant-dropdown-link"> Vegetarian</Item>
-        <Item> Kakogenic</Item>
-        <Item> Mediterranean</Item>
-        <Item>Organic</Item>
-      </SubMenu>
-      <Item style={{ marginTop: "14px" }}>Search</Item>
-      <SubMenu title="Pages" style={{ marginRight: "auto", marginTop: "14px" }}>
-        <SubMenu title="Users">
-          <Item>My Account</Item>
-          <Item>Sign In</Item>
-          <Item>Sign Up</Item>
+
+      <>
+        <SubMenu title="Demos" style={{ marginTop: "14px" }}>
+          <Item>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.antgroup.com"
+            >
+              Modern
+            </a>
+          </Item>
+          <Item>Classic</Item>
+          <Item>Vintage</Item>
+          <Item>Standard</Item>
+          <Item>Minimal</Item>
+          <Item>Trendy</Item>
+          <Item>Elegant</Item>
         </SubMenu>
-        <Item>FAQ About Us</Item>
-        <Item>Privacy Policy</Item>
-        <Item>Terms & Condition</Item>
-        <Item>Contact Us</Item>
-        <Item>Checkout</Item>
-        <Item>404</Item>
-      </SubMenu>
+        <SubMenu key="smenu" title="Categories" style={{ marginTop: "14px" }}>
+          <Item className="ant-dropdown-link">Fresh Vegetables</Item>
+          <Item>Diet Nutrition</Item>
+          <Item> Healthy Foods</Item>
+          <Item> Grocery Items</Item>
+          <Item> Beaf Steak</Item>
+        </SubMenu>
+        <SubMenu key="ssmenu" title="Dietary" style={{ marginTop: "14px" }}>
+          <Item className="ant-dropdown-link"> Vegetarian</Item>
+          <Item> Kakogenic</Item>
+          <Item> Mediterranean</Item>
+          <Item>Organic</Item>
+        </SubMenu>
+        <Item style={{ marginTop: "14px" }}>Search</Item>
+        <SubMenu
+          title="Pages"
+          style={{ marginRight: "auto", marginTop: "14px" }}
+        >
+          <SubMenu title="Users">
+            <Item>My Account</Item>
+            <Item>Sign In</Item>
+            <Item>Sign Up</Item>
+          </SubMenu>
+          <Item>FAQ About Us</Item>
+          <Item>Privacy Policy</Item>
+          <Item>Terms & Condition</Item>
+          <Item>Contact Us</Item>
+          <Item>Checkout</Item>
+          <Item>404</Item>
+        </SubMenu>
+      </>
+
       <Item style={{ marginTop: "14px" }}>
         <Dropdown overlay={menu} trigger={["click"]}>
           <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
@@ -128,10 +139,22 @@ const Navbar = () => {
         </Dropdown>
       </Item>
       <Item style={{ marginTop: "14px" }}>
-        <Button>Cart</Button>
+        <Button
+          icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
+          type="text"
+          size="large"
+        >
+          Cart
+        </Button>
       </Item>
-      <Item style={{ marginTop: "14px", borderStyle: "none" }}>
-        <Button>Sign In</Button>
+      <Item style={{ marginTop: "14px" }}>
+        <Button
+          icon={<UserOutlined style={{ fontSize: "20px" }} />}
+          type="text"
+          shape="round"
+        >
+          Sign In
+        </Button>
       </Item>
     </Menu>
   );

@@ -19,10 +19,12 @@ const Homepage = () => {
             BoroBazar makes online grocery shopping fast and easy. Get groceries
             delivered and order the best of seasonal farm fresh food.
           </p>
-          <a href="#">
+        </div>
+        <div className="app__promote__buttons">
+          <a>
             <img alt="app store" src={appleStore} />{" "}
           </a>
-          <a href="#" className="google_play_store">
+          <a className="google_play_store">
             <img alt="google store" src={googleStore} />{" "}
           </a>
         </div>

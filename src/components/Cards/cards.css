@@ -1,6 +1,9 @@
 .super__discount {
-  background: url("../../assets/images/superDiscount.png");
-  height: 40vh;
-  cursor: pointer;
   margin: 40px;
+  cursor: pointer;
+}
+
+.super__discount > img {
+  max-width: 100%;
+  height: auto;
 }

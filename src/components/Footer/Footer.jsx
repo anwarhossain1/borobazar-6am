@@ -27,7 +27,7 @@ const Footer = () => {
               the food market you can blindly trust
             </h3>
           </div>
-          <div className="col_icons">
+          <div className="col__icons">
             <ul>
               <li>
                 <FacebookOutlined

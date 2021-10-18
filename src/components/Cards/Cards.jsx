@@ -5,7 +5,8 @@ import { dataOfBestSellerProduct } from "./BestSeller/bestSellerData";
 import ColorCards from "./ColorFulCards/ColorCards";
 import CuratedCollections from "./Curated/CuratedCollections";
 import { dataOfPopularProduct } from "./popularProductData";
-
+import banner from "../../assets/images/superDiscount.png";
+import "./cards.css";
 const Cards = () => {
   return (
     <>
@@ -19,7 +20,9 @@ const Cards = () => {
           data={dataOfBestSellerProduct}
         />
       </div>
-      <div className="super__discount" />
+      <div className="super__discount">
+        <img src={banner} />
+      </div>
       <div>
         <PopuparProduct
           title="Popular product that we sold"
