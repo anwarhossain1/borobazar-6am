@@ -1,8 +1,18 @@
+.ant-menu {
+  padding: 200px;
+}
+
 .navbar {
   overflow: hidden;
-  position: inherit;
   width: 100%;
-  padding-left: 40px;
+  transition: all 0.7s ease-in;
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .logo {

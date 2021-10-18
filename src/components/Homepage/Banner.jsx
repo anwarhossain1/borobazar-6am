@@ -1,6 +1,6 @@
 import React from "react";
 import { Input, Space } from "antd";
-import { AudioOutlined } from "@ant-design/icons";
+import { AudioOutlined, SearchOutlined } from "@ant-design/icons";
 import banner from "../../assets/images/banner.jpg";
 import "./banner.css";
 const { Search } = Input;
@@ -18,7 +18,20 @@ const Banner = () => {
             </p>
           </div>
           <div className="search">
-            <Search placeholder="What are you looking" enterButton />
+            <Input
+              style={{
+                width: "100%",
+                height: "65px",
+                borderRadius: "8px",
+                padding: "20px",
+              }}
+              placeholder="What are you looking"
+              suffix={
+                <SearchOutlined
+                  style={{ cursor: "pointer", fontSize: "20px" }}
+                />
+              }
+            />
           </div>
         </div>
       </div>

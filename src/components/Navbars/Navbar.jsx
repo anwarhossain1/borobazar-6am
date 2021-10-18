@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, Dropdown, Button } from "antd";
-import { MenuOutlined, DownOutlined } from "@ant-design/icons";
+import { MenuOutlined, DownOutlined, MailOutlined } from "@ant-design/icons";
 import logo from "../../assets/images/logo.png";
 import ukLogo from "../../assets/images/uk.png";
 import saLogo from "../../assets/images/saudi-arabia.png";
@@ -13,6 +13,25 @@ import "./Navbar.css";
 const { SubMenu, Item, Group } = Menu;
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  //taking the scroll size
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+  let navbarClasses = ["navbar"];
+  if (scrolled) {
+    navbarClasses.push("scrolled");
+  }
   const menu = (
     <Menu>
       <Item key="0">
@@ -47,12 +66,15 @@ const Navbar = () => {
     </Menu>
   );
   return (
-    <Menu mode="horizontal">
+    <Menu
+      className={navbarClasses.join(" ")}
+      mode="horizontal"
+      style={{ padding: "5px", fontSize: "15px" }}
+    >
       {/* <Item icon={<MenuOutlined />} /> */}
       <Item className="logo_bottom">
         <img alt="logo" src={logo} className="logo" />
       </Item>
-
       <SubMenu title="Demos" style={{ marginTop: "14px" }}>
         <Item>
           <a

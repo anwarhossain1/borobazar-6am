@@ -5,7 +5,6 @@
 }
 
 .banner__content {
-  padding-top: 100px;
   text-align: center;
   padding-left: 40px;
   padding-right: 40px;
@@ -44,32 +43,32 @@
     padding-left: 35%;
     padding-right: 35%;
     border-radius: 14px;
+    z-index: -1;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .banner__content {
-    padding-top: 100px;
+    padding-top: 140px;
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 26%;
+    padding-right: 25%;
   }
   .banner__content > h1 {
     color: #ffffff;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 60px;
   }
   .banner__content > p {
     color: white;
     font-weight: bold;
-    font-size: 22px;
-    padding-left: 25%;
-    padding-right: 25%;
+    font-size: 20px;
+    padding-left: 18%;
+    padding-right: 18%;
   }
   .search {
-    padding-left: 35%;
+    padding-left: 34%;
     padding-right: 35%;
-    height: 100px;
   }
 }
 @media (max-width: 481px) {
