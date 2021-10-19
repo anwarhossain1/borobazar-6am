@@ -29,7 +29,16 @@ const CardSwipe = ({ images }) => {
       pagination={true}
     >
       {images.map((card) => {
-        return <SwiperSlide>{<img src={card.image} />}</SwiperSlide>;
+        return (
+          <SwiperSlide>
+            {
+              <div>
+                <img src={card.image} />
+                {/* <button className="button__for__images">Explore more</button> */}
+              </div>
+            }
+          </SwiperSlide>
+        );
       })}
 
       {/* <SwiperSlide>Slide 2</SwiperSlide>

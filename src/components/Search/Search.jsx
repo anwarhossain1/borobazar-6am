@@ -15,14 +15,18 @@ const Search = () => {
       />
 
       <Modal
-        style={{ top: 75, height: 100 }}
-        title="What"
+        style={{ top: 70, height: 100 }}
         top
         visible={visible}
         onOk={() => setVisible(false)}
         onCancel={() => setVisible(false)}
         width={900}
-      ></Modal>
+      >
+        <Input
+          placeholder="What are you looking for..."
+          style={{ height: "50px" }}
+        />
+      </Modal>
     </>
   );
 };

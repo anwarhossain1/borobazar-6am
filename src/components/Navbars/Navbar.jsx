@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Menu, Dropdown, Button } from "antd";
+import { Menu, Dropdown, Button, Modal, Input } from "antd";
 import {
   MenuOutlined,
   DownOutlined,
@@ -16,12 +16,13 @@ import spainLogo from "../../assets/images/spain.png";
 import israelLogo from "../../assets/images/israel.png";
 import germanyLogo from "../../assets/images/germany.png";
 import chainaLogo from "../../assets/images/china.png";
-
+import Search from "../Search/Search";
 import "./Navbar.css";
 const { SubMenu, Item, Group } = Menu;
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   //taking the scroll size
   const handleScroll = () => {
@@ -35,7 +36,25 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    if (visible) {
+      return (
+        <Modal
+          style={{ top: 70, height: 100 }}
+          top
+          visible={visible}
+          onOk={() => setVisible(false)}
+          onCancel={() => setVisible(false)}
+          width={900}
+        >
+          <Input
+            placeholder="What are you looking for..."
+            style={{ height: "50px" }}
+          />
+        </Modal>
+      );
+    }
   }, []);
+
   let navbarClasses = ["navbar"];
   if (scrolled) {
     navbarClasses.push("scrolled");
@@ -144,6 +163,7 @@ const Navbar = () => {
             <Button
               type="text"
               icon={<SearchOutlined style={{ fontSize: "20px" }} />}
+              onClick={() => setVisible(true)}
             />
           </Item>
           <Item style={{ marginTop: "14px" }}>
@@ -166,15 +186,17 @@ const Navbar = () => {
           </Item>
         </>
       ) : (
-        <Item style={{ marginTop: "14px" }}>
-          <Button
-            icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
-            type="text"
-            size="large"
-          >
-            Delivery: <span>Address</span> <ArrowDownOutlined />
-          </Button>
-        </Item>
+        <>
+          <Item style={{ marginTop: "14px" }}>
+            <Button
+              icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
+              type="text"
+              size="large"
+            >
+              Delivery: <span>Address</span> <ArrowDownOutlined />
+            </Button>
+          </Item>
+        </>
       )}
     </Menu>
   );

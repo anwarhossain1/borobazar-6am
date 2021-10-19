@@ -4,6 +4,7 @@ import CountDown from "./components/Navbars/CountDown";
 import Navbar from "./components/Navbars/Navbar";
 import Footer from "./components/Footer/Footer";
 import MiddleNavbar from "./components/Navbars/MiddleNavbar";
+import AllProducts from "./components/AllProducts/AllProducts";
 const App = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ const App = () => {
       <div className="homepage">
         <Homepage />
       </div>
+
       <div className="Footer">
         <Footer />
       </div>

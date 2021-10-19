@@ -3,12 +3,13 @@ import Banner from "./Banner";
 import appleStore from "../../assets/images/app_store.png";
 import googleStore from "../../assets/images/google_play.png";
 import "./homepage.css";
-import image1 from "../../assets/images/app_promote.png";
-import image2 from "../../assets/images/superDiscount.png";
+import image1 from "../../assets/images/steak.png";
+import image2 from "../../assets/images/steak.png";
 import image3 from "../../assets/images/steak.png";
 
 import Cards from "../Cards/Cards";
 import CardSwipe from "../Cards/CardSwipe/CardSwipe";
+import AllProducts from "../AllProducts/AllProducts";
 const Homepage = () => {
   const images = [
     {
@@ -28,6 +29,9 @@ const Homepage = () => {
       <CardSwipe images={images} />
       <div className="cards">
         <Cards />
+      </div>
+      <div className="all__products">
+        <AllProducts />
       </div>
       <div className="app__promote">
         <div className="content">

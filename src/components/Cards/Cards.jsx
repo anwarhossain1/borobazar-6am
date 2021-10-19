@@ -13,7 +13,7 @@ const Cards = () => {
       <div>
         <ColorCards />
       </div>
-      <div>
+      {/* <div>
         <BestSeller
           title="Best seller grocery near you"
           description="We provide best quality & fresh grocery items near your location"
@@ -32,7 +32,7 @@ const Cards = () => {
       </div>
       <div className="curated__collections">
         <CuratedCollections />
-      </div>
+      </div> */}
     </>
   );
 };

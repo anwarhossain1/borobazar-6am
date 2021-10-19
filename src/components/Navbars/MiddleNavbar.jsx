@@ -73,45 +73,52 @@ const MiddleNavbar = () => {
     </Menu>
   );
   return (
-    <Menu mode="horizontal" style={{ padding: "5px", fontSize: "15px" }}>
-      <Item>
-        <img
-          alt="logo"
-          src={logo}
-          //   className={scrolled ? "logoVisible" : "logoHide"}
-        />
-      </Item>
-      <Item style={{ marginRight: "auto", boxShadow: "none" }}>
-        <Search />
-      </Item>
+    <>
+      <Menu mode="horizontal" className="navBar__menu">
+        <Item>
+          <img
+            alt="logo"
+            src={logo}
+            style={{ marginTop: "15px" }}
+            //   className={scrolled ? "logoVisible" : "logoHide"}
+          />
+        </Item>
+        <>
+          <Item style={{ marginRight: "auto" }}>
+            <Search />
+          </Item>
 
-      <Item>
-        <Dropdown overlay={menu} trigger={["click"]}>
-          <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
-            <img alt="uk" src={ukLogo} className="lan-images" />
-            English - EN <DownOutlined />
-          </a>
-        </Dropdown>
-      </Item>
-      <Item>
-        <Button
-          icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
-          type="text"
-          size="large"
-        >
-          Cart
-        </Button>
-      </Item>
-      <Item>
-        <Button
-          icon={<UserOutlined style={{ fontSize: "20px" }} />}
-          type="text"
-          shape="round"
-        >
-          Sign In
-        </Button>
-      </Item>
-      {/* {scrolled ? (
+          <Item style={{ marginTop: "10px" }}>
+            <Dropdown overlay={menu} trigger={["click"]}>
+              <a
+                className="ant-dropdown-link"
+                onClick={(e) => e.preventDefault()}
+              >
+                <img alt="uk" src={ukLogo} className="lan-images" />
+                English - EN <DownOutlined />
+              </a>
+            </Dropdown>
+          </Item>
+          <Item style={{ marginTop: "10px" }}>
+            <Button
+              icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
+              type="text"
+              size="large"
+            >
+              Cart
+            </Button>
+          </Item>
+          <Item style={{ marginTop: "10px" }}>
+            <Button
+              icon={<UserOutlined style={{ fontSize: "20px" }} />}
+              type="text"
+              shape="round"
+            >
+              Sign In
+            </Button>
+          </Item>
+        </>
+        {/* {scrolled ? (
         <>
           <Item style={{ marginTop: "14px" }}>
             <Button
@@ -149,7 +156,8 @@ const MiddleNavbar = () => {
           </Button>
         </Item>
       )} */}
-    </Menu>
+      </Menu>
+    </>
   );
 };
 

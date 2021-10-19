@@ -1,3 +1,7 @@
+.all__products {
+  margin: 40px;
+}
+
 .app__promote {
   background: url("../../assets/images/app_promote.png");
   width: 100%;
@@ -45,3 +49,15 @@
     font-size: 15px;
   }
 } */
+
+@media only screen and (min-width: 992) {
+  .content {
+    width: 80%;
+  }
+  .app__promote__buttons {
+    margin-left: 50%;
+  }
+  .google_play_store {
+    margin-left: 20px;
+  }
+}
